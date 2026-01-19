@@ -8,295 +8,331 @@
   <meta name="description" content="Hasibul Polok — Full-Stack Web Developer specializing in React.js and modern web applications." />
   <meta name="theme-color" content="#0b1220" />
 
-
-<!-- Favicon -->
-  <link rel="icon" href="fav.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="fav.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="fav.png" />
-<link rel="icon" type="image/png" sizes="48x48" href="fav.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="fav.png" />
-<link rel="shortcut icon" href="fav.png" />
+  <!-- Favicon (your current file name) -->
+  <link rel="icon" type="image/png" href="fav.png" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <!-- Top bar -->
+  <header class="topbar">
+    <a class="brand reveal" data-delay="1" href="#home" aria-label="Go to home">
+      <span class="dot"></span> Polok
+    </a>
 
-<!-- ================= HEADER ================= -->
-<header class="topbar">
-  <a class="brand" href="#home">
-    <span class="dot"></span> Polok
-  </a>
+    <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-  <button class="menuBtn" id="menuBtn">
-    <span></span><span></span><span></span>
-  </button>
+    <nav class="nav" id="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a class="btn small" href="mailto:hasibulpolok.bdn@gmail.com">Hire Me</a>
+    </nav>
+  </header>
 
-  <nav class="nav" id="nav">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-    <a class="btn small" href="mailto:hasibulpolok.bdn@gmail.com">Hire Me</a>
-  </nav>
-</header>
+  <!-- Hero -->
+  <main id="home" class="section hero">
+    <div class="container heroGrid">
+      <div class="heroText reveal-up">
+        <p class="eyebrow">Full-Stack Web Developer</p>
 
-<!-- ================= HERO ================= -->
-<main id="home" class="section hero">
-  <div class="container heroGrid">
+        <h1>
+          Hi, I’m <span class="grad">Hasibul Polok</span>.
+          I build fast, clean, user-friendly web apps.
+        </h1>
 
-    <!-- Hero text -->
-    <div class="heroText reveal-up">
-      <p class="eyebrow">Full-Stack Web Developer</p>
-      <h1>
-        Hi, I’m <span class="grad">Hasibul Polok</span><br />
-        I build fast, modern web apps.
-      </h1>
+        <p class="lead">
+          React.js focused developer with SPA experience. I care about clean UI, performance,
+          and maintainable code.
+        </p>
 
-      <p class="lead">
-        React.js focused developer with real-world SPA experience.
-        I care about clean UI, performance, and maintainable code.
-      </p>
-
-      <div class="ctaRow">
-        <a class="btn" href="#projects">View Projects</a>
-        <a class="btn ghost" href="#contact">Contact</a>
-      </div>
-
-      <div class="metaRow">
-        <div class="pill">📍 Bangladesh</div>
-
-        <a class="pill link" target="_blank" href="https://www.linkedin.com/in/hasibulpolok">
-          LinkedIn
-        </a>
-
-        <a class="pill link" target="_blank" href="https://github.com/hasibulpolok">
-          GitHub
-        </a>
-
-        <a class="pill link" target="_blank" href="https://www.fiverr.com/developerpolok">
-          Fiverr
-        </a>
-      </div>
-    </div>
-
-    <!-- Hero card -->
-    <div class="heroCard reveal-right" data-delay="2">
-      <div class="card">
-        <div class="cardHead">
-          <img
-            src="profile.jpeg"
-            alt="Hasibul Polok"
-            class="avatar avatar-img"
-          />
-          <div>
-            <div class="name">Hasibul Polok</div>
-            <div class="sub">React.js • Full-Stack • SPA</div>
-          </div>
+        <div class="ctaRow">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn ghost" href="#contact">Contact</a>
         </div>
 
-        <div class="cardBody">
-          <div class="stat">
-            <div class="k">Focus</div>
-            <div class="v">UI/UX & Performance</div>
-          </div>
+        <div class="metaRow">
+          <div class="pill">📍 Bangladesh</div>
 
-          <div class="stat">
-            <div class="k">Stack</div>
-            <div class="v">React, JS, HTML, CSS</div>
-          </div>
+          <a class="pill link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/hasibulpolok">
+            LinkedIn
+          </a>
 
-          <div class="stat">
-            <div class="k">Phone</div>
-            <div class="v">
-              <a href="tel:+8801765967395">+880 1765-967395</a>
-            </div>
-          </div>
+          <a class="pill link" target="_blank" rel="noreferrer" href="https://github.com/hasibulpolok">
+            GitHub
+          </a>
 
-          <div class="stat">
-            <div class="k">Email</div>
-            <div class="v">hasibulpolok.bdn@gmail.com</div>
-          </div>
-        </div>
-
-        <div class="cardFooter">
-          <a class="btn small" href="#contact">Let’s Work</a>
-          <a class="btn small ghost" href="assets/Hasibul-Polok-CV.pdf" download>
-            Download CV
+          <a class="pill link" target="_blank" rel="noreferrer" href="https://www.fiverr.com/developerpolok">
+            Fiverr
           </a>
         </div>
       </div>
-    </div>
 
-  </div>
-</main>
+      <div class="heroCard reveal-right" data-delay="2">
+        <div class="card">
+          <div class="cardHead">
+            <!-- Your current photo file name in root -->
+            <img src="profile.jpeg" alt="Hasibul Polok profile photo" class="avatar avatar-img" />
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section">
-  <div class="container split">
-    <div class="reveal-left">
-      <h2>About</h2>
-      <p>
-        I’m a Full-Stack Web Developer passionate about building modern,
-        responsive, and scalable web applications.
-      </p>
-      <p>
-        I enjoy working with React, clean UI systems, and real-world product logic.
-      </p>
+            <div>
+              <div class="name">Hasibul Polok</div>
+              <div class="sub">React.js • Full-Stack • SPA</div>
+            </div>
+          </div>
 
-      <div class="chips">
-        <span class="chip">React.js</span>
-        <span class="chip">JavaScript</span>
-        <span class="chip">SPA</span>
-        <span class="chip">UI Engineering</span>
+          <div class="cardBody">
+            <div class="stat">
+              <div class="k">Focus</div>
+              <div class="v">UI/UX + Performance</div>
+            </div>
+
+            <div class="stat">
+              <div class="k">Stack</div>
+              <div class="v">React, JS, HTML, CSS</div>
+            </div>
+
+            <div class="stat">
+              <div class="k">Phone</div>
+              <div class="v">
+                <a href="tel:+8801765967395">+880 1765-967395</a>
+              </div>
+            </div>
+
+            <div class="stat">
+              <div class="k">Email</div>
+              <div class="v">
+                <a href="mailto:hasibulpolok.bdn@gmail.com">hasibulpolok.bdn@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardFooter">
+            <a class="btn small" href="#contact">Let’s Work</a>
+            <!-- Keep this link only if you actually add a CV file -->
+            <!-- <a class="btn small ghost" href="Hasibul-Polok-CV.pdf" download>Download CV</a> -->
+          </div>
+        </div>
+
+        <p class="hint">Tip: Keep your profile photo square for best cropping.</p>
       </div>
     </div>
+  </main>
 
-    <div class="panel reveal-right" data-delay="2">
-      <h3>Quick Info</h3>
-      <ul class="cleanList">
-        <li><span>Role</span> Full-Stack Developer</li>
-        <li><span>Specialty</span> React SPA</li>
-        <li><span>Phone</span> +880 1765-967395</li>
-        <li><span>Open to</span> Job & Freelance</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container split">
+      <div class="reveal-left">
+        <h2>About</h2>
+        <p>
+          I’m a Full-Stack Web Developer who enjoys building modern, responsive, and maintainable web applications.
+          I care about clean architecture, readable code, and great user experience.
+        </p>
 
-<!-- ================= SKILLS ================= -->
-<section id="skills" class="section alt">
-  <div class="container">
-    <h2 class="reveal-up">Skills</h2>
+        <div class="chips">
+          <span class="chip">React.js</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">SPA</span>
+          <span class="chip">UI Engineering</span>
+        </div>
+      </div>
 
-    <div class="grid3">
-      <div class="tile reveal-up" data-delay="1">
-        <h3>Frontend</h3>
-        <ul>
-          <li>React.js, SPA Architecture</li>
-          <li>HTML5, CSS3</li>
-          <li>Responsive Design</li>
+      <div class="panel reveal-right" data-delay="2">
+        <h3>Quick Info</h3>
+        <ul class="cleanList">
+          <li><span>Role</span> Full-Stack Developer</li>
+          <li><span>Specialty</span> React SPA</li>
+          <li><span>Phone</span> +880 1765-967395</li>
+          <li><span>Open to</span> Jobs / Freelance</li>
         </ul>
       </div>
-
-      <div class="tile reveal-up" data-delay="2">
-        <h3>Backend</h3>
-        <ul>
-          <li>Node.js (Basic)</li>
-          <li>REST APIs</li>
-          <li>Auth Concepts</li>
-        </ul>
-      </div>
-
-      <div class="tile reveal-up" data-delay="3">
-        <h3>Tools</h3>
-        <ul>
-          <li>Git & GitHub</li>
-          <li>Netlify / GitHub Pages</li>
-          <li>Debugging</li>
-        </ul>
-      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= PROJECTS ================= -->
-<section id="projects" class="section">
-  <div class="container">
-    <h2 class="reveal-up">Projects</h2>
+  <!-- Skills -->
+  <section id="skills" class="section alt">
+    <div class="container">
+      <h2 class="reveal-up">Skills</h2>
 
-    <div class="grid3">
-      <article class="project reveal-up" data-delay="1">
-        <h3>Booking UI (Users)</h3>
-        <p class="muted">User-facing booking SPA built with React.</p>
-        <div class="tags">
-          <span class="tag">React</span>
-          <span class="tag">SPA</span>
+      <div class="grid3">
+        <div class="tile reveal-up" data-delay="1">
+          <h3>Frontend</h3>
+          <ul>
+            <li>React.js, SPA Architecture</li>
+            <li>HTML5, CSS3, Responsive Design</li>
+            <li>Performance & Accessibility</li>
+          </ul>
         </div>
-        <a class="link" target="_blank" href="https://github.com/hasibulpolok/bookingUI-users">Code</a>
-      </article>
 
-      <article class="project reveal-up" data-delay="2">
-        <h3>Booking Widget</h3>
-        <p class="muted">Reusable booking widget component.</p>
-        <div class="tags">
-          <span class="tag">React</span>
-          <span class="tag">Widget</span>
+        <div class="tile reveal-up" data-delay="2">
+          <h3>Backend</h3>
+          <ul>
+            <li>Node.js (Basic)</li>
+            <li>REST APIs</li>
+            <li>Auth Concepts</li>
+          </ul>
         </div>
-        <a class="link" target="_blank" href="https://github.com/hasibulpolok/bookingwidget">Code</a>
-      </article>
 
-      <article class="project reveal-up" data-delay="3">
-        <h3>MilksoulFood</h3>
-        <p class="muted">Restaurant-style frontend website.</p>
-        <div class="tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JS</span>
+        <div class="tile reveal-up" data-delay="3">
+          <h3>Tools</h3>
+          <ul>
+            <li>Git & GitHub</li>
+            <li>GitHub Pages / Netlify</li>
+            <li>Debugging & QA mindset</li>
+          </ul>
         </div>
-        <a class="link" target="_blank" href="https://github.com/hasibulpolok/MilksoulFood">Code</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= EXPERIENCE ================= -->
-<section id="experience" class="section alt">
-  <div class="container">
-    <h2 class="reveal-up">Experience</h2>
-
-    <div class="timeline">
-      <div class="titem reveal-up" data-delay="1">
-        <strong>2024 — Present</strong>
-        <p>Full-Stack Developer (Job Holder)</p>
-      </div>
-
-      <div class="titem reveal-up" data-delay="2">
-        <strong>2023 — 2024</strong>
-        <p>Frontend Developer — Freelance & Projects</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section">
-  <div class="container split">
-    <div class="reveal-left">
-      <h2>Contact</h2>
-      <p>Let’s talk about your project.</p>
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="sectionHead reveal-up">
+        <h2>Projects</h2>
+        <p class="muted">Selected public work from my GitHub.</p>
+      </div>
 
-      <div class="contactBox">
-        <a class="btn" href="mailto:hasibulpolok.bdn@gmail.com">Email Me</a>
-        <a class="btn ghost" href="tel:+8801765967395">Call Me</a>
+      <div class="grid3">
+        <article class="project reveal-up" data-delay="1">
+          <div class="projectTop">
+            <h3>Booking UI (Users)</h3>
+            <p class="muted">User-facing booking SPA built with React.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">React</span><span class="tag">SPA</span>
+          </div>
+          <div class="projectLinks">
+            <a class="link" href="https://github.com/hasibulpolok/bookingUI-users" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="project reveal-up" data-delay="2">
+          <div class="projectTop">
+            <h3>Booking Widget</h3>
+            <p class="muted">Reusable booking widget component.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">React</span><span class="tag">Widget</span>
+          </div>
+          <div class="projectLinks">
+            <a class="link" href="https://github.com/hasibulpolok/bookingwidget" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="project reveal-up" data-delay="3">
+          <div class="projectTop">
+            <h3>MilksoulFood</h3>
+            <p class="muted">Restaurant-style frontend website.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+          </div>
+          <div class="projectLinks">
+            <a class="link" href="https://github.com/hasibulpolok/MilksoulFood" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
       </div>
     </div>
+  </section>
 
-    <form class="panel reveal-right" data-delay="2" id="contactForm">
-      <h3>Quick Message</h3>
-      <label>Name<input name="name" /></label>
-      <label>Email<input name="email" /></label>
-      <label>Message<textarea name="message"></textarea></label>
-      <button class="btn" type="submit">Create Email Draft</button>
-    </form>
-  </div>
-</section>
+  <!-- Experience -->
+  <section id="experience" class="section alt">
+    <div class="container">
+      <h2 class="reveal-up">Experience</h2>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  <div class="container footerRow">
-    <div class="muted">
-      © <span id="year"></span> Hasibul Polok
+      <div class="timeline">
+        <div class="titem reveal-up" data-delay="1">
+          <div class="tleft">
+            <div class="tdate">2024 — Present</div>
+            <div class="trole">Full-Stack Developer (Job Holder)</div>
+            <div class="torg">—</div>
+          </div>
+          <div class="tright">
+            <ul>
+              <li>Built responsive UI components and improved page performance.</li>
+              <li>Integrated APIs and improved UX flows.</li>
+              <li>Delivered features end-to-end with clean code practices.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="titem reveal-up" data-delay="2">
+          <div class="tleft">
+            <div class="tdate">2023 — 2024</div>
+            <div class="trole">Frontend Developer</div>
+            <div class="torg">Freelance / Projects</div>
+          </div>
+          <div class="tright">
+            <ul>
+              <li>Built SPAs with clean UI and SEO basics.</li>
+              <li>Converted designs into production-ready, accessible pages.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="footerLinks">
-      <a href="#home">Top</a>
-      <a href="https://www.fiverr.com/developerpolok" target="_blank">Fiverr</a>
-      <a href="https://github.com/hasibulpolok" target="_blank">GitHub</a>
-    </div>
-  </div>
-</footer>
+  </section>
 
-<script src="app.js"></script>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container split">
+      <div class="reveal-left">
+        <h2>Contact</h2>
+        <p>Want to hire me or discuss a project? Email or call me.</p>
+
+        <div class="contactBox">
+          <a class="btn" href="mailto:hasibulpolok.bdn@gmail.com">Email Me</a>
+          <a class="btn ghost" href="tel:+8801765967395">Call Me</a>
+          <button class="btn ghost" id="copyBtn" type="button">Copy Email</button>
+        </div>
+
+        <p class="muted small">
+          Fiverr: <a class="link" target="_blank" rel="noreferrer" href="https://www.fiverr.com/developerpolok">developerpolok</a>
+        </p>
+      </div>
+
+      <form class="panel reveal-right" data-delay="2" id="contactForm">
+        <h3>Quick Message (optional)</h3>
+
+        <label>
+          Name
+          <input name="name" placeholder="Your name" autocomplete="name" />
+        </label>
+
+        <label>
+          Email
+          <input name="email" placeholder="you@example.com" autocomplete="email" />
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" rows="4" placeholder="Write your message..."></textarea>
+        </label>
+
+        <button class="btn" type="submit">Create Email Draft</button>
+        <p class="muted small">This form opens your email client; it does not auto-send.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footerRow">
+      <div class="muted">© <span id="year"></span> Hasibul Polok. All rights reserved.</div>
+      <div class="footerLinks">
+        <a href="#home">Top</a>
+        <a href="https://www.fiverr.com/developerpolok" target="_blank" rel="noreferrer">Fiverr</a>
+        <a href="https://github.com/hasibulpolok" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/hasibulpolok" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>

@@ -1,25 +1,26 @@
-// app.js
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
 const yearEl = document.getElementById("year");
 const copyBtn = document.getElementById("copyBtn");
 const contactForm = document.getElementById("contactForm");
 
-yearEl.textContent = new Date().getFullYear();
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-menuBtn.addEventListener("click", () => {
+// Mobile menu
+menuBtn?.addEventListener("click", () => {
   const open = nav.classList.toggle("open");
   menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
 });
 
-nav.querySelectorAll("a").forEach((a) => {
+nav?.querySelectorAll("a").forEach((a) => {
   a.addEventListener("click", () => {
     nav.classList.remove("open");
-    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn?.setAttribute("aria-expanded", "false");
   });
 });
 
-copyBtn.addEventListener("click", async () => {
+// Copy email button
+copyBtn?.addEventListener("click", async () => {
   const email = "hasibulpolok.bdn@gmail.com";
   try {
     await navigator.clipboard.writeText(email);
@@ -30,7 +31,8 @@ copyBtn.addEventListener("click", async () => {
   }
 });
 
-contactForm.addEventListener("submit", (e) => {
+// Contact form -> mailto draft
+contactForm?.addEventListener("submit", (e) => {
   e.preventDefault();
   const fd = new FormData(contactForm);
   const name = (fd.get("name") || "").toString().trim();
@@ -38,16 +40,13 @@ contactForm.addEventListener("submit", (e) => {
   const message = (fd.get("message") || "").toString().trim();
 
   const subject = encodeURIComponent(`Website Contact — ${name || "New message"}`);
-  const body = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`
-  );
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`);
 
   window.location.href = `mailto:hasibulpolok.bdn@gmail.com?subject=${subject}&body=${body}`;
 });
 
-// ---------- Reveal on scroll ----------
+// Reveal on scroll (animations)
 const revealEls = document.querySelectorAll(".reveal, .reveal-up, .reveal-left, .reveal-right");
-
 const io = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -56,6 +55,4 @@ const io = new IntersectionObserver(
   },
   { threshold: 0.12 }
 );
-
 revealEls.forEach((el) => io.observe(el));
-
