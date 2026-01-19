@@ -6,7 +6,7 @@ const contactForm = document.getElementById("contactForm");
 
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Mobile menu
+/* Mobile menu */
 menuBtn?.addEventListener("click", () => {
   const open = nav.classList.toggle("open");
   menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
@@ -19,7 +19,7 @@ nav?.querySelectorAll("a").forEach((a) => {
   });
 });
 
-// Copy email button
+/* Copy email */
 copyBtn?.addEventListener("click", async () => {
   const email = "hasibulpolok.bdn@gmail.com";
   try {
@@ -31,7 +31,7 @@ copyBtn?.addEventListener("click", async () => {
   }
 });
 
-// Contact form -> mailto draft
+/* Contact form -> mailto draft */
 contactForm?.addEventListener("submit", (e) => {
   e.preventDefault();
   const fd = new FormData(contactForm);
@@ -41,12 +41,12 @@ contactForm?.addEventListener("submit", (e) => {
 
   const subject = encodeURIComponent(`Website Contact — ${name || "New message"}`);
   const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`);
-
   window.location.href = `mailto:hasibulpolok.bdn@gmail.com?subject=${subject}&body=${body}`;
 });
 
-// Reveal on scroll (animations)
+/* Reveal on scroll */
 const revealEls = document.querySelectorAll(".reveal, .reveal-up, .reveal-left, .reveal-right");
+
 const io = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -55,4 +55,5 @@ const io = new IntersectionObserver(
   },
   { threshold: 0.12 }
 );
+
 revealEls.forEach((el) => io.observe(el));
