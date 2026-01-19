@@ -248,3 +248,7 @@ input:focus, textarea:focus{border-color: rgba(34,211,238,.55)}
   }
   .nav.open{display:flex}
 }
+
+.avatar-img{
+  object-fit: cover;
+}
