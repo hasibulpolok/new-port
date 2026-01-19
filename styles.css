@@ -252,3 +252,37 @@ input:focus, textarea:focus{border-color: rgba(34,211,238,.55)}
 .avatar-img{
   object-fit: cover;
 }
+
+/* ---------- Animations ---------- */
+@media (prefers-reduced-motion: reduce){
+  *{ scroll-behavior:auto !important; }
+  .reveal, .reveal-up, .reveal-left, .reveal-right{
+    transition:none !important;
+    transform:none !important;
+    opacity:1 !important;
+  }
+}
+
+/* base reveal */
+.reveal{
+  opacity:0;
+  transform: translateY(14px);
+  transition: opacity .7s ease, transform .7s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible{
+  opacity:1;
+  transform: translateY(0);
+}
+
+/* variants */
+.reveal-up{ transform: translateY(18px); }
+.reveal-left{ transform: translateX(-18px); }
+.reveal-right{ transform: translateX(18px); }
+
+/* stagger helper */
+[data-delay="1"]{ transition-delay: .08s; }
+[data-delay="2"]{ transition-delay: .16s; }
+[data-delay="3"]{ transition-delay: .24s; }
+[data-delay="4"]{ transition-delay: .32s; }
+

@@ -44,3 +44,18 @@ contactForm.addEventListener("submit", (e) => {
 
   window.location.href = `mailto:hasibulpolok.bdn@gmail.com?subject=${subject}&body=${body}`;
 });
+
+// ---------- Reveal on scroll ----------
+const revealEls = document.querySelectorAll(".reveal, .reveal-up, .reveal-left, .reveal-right");
+
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) entry.target.classList.add("is-visible");
+    });
+  },
+  { threshold: 0.12 }
+);
+
+revealEls.forEach((el) => io.observe(el));
+
